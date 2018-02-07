@@ -1,10 +1,8 @@
 public class Pion {
+
   private int x;
   private int y;
-  private int health;
-  private char morale;
-  private int melee;
-  private int missile;
+
 
   public int getX(){
     return this.x;
@@ -27,23 +25,5 @@ public class Pion {
     System.out.print(Pion.getX());
   }
   */
-
-
-
-  public int getHealth() {
-    return this.health;
-  }
-
-  public char getMorale() {
-    return this.morale;
-  }
-
-  public int getMelee() {
-    return this.melee;
-  }
-
-  public int getMissile() {
-    return this.missile;
-  }
 
 }
