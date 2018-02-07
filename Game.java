@@ -1,6 +1,9 @@
 import java.awt.*;
+import java.awt.Image;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 public class Game
 {
@@ -68,7 +71,7 @@ public class Game
     //this.add(panel);  // impossible si context static
 
 
-    /** a revoir --> taille de la fenêtre */
+    /** taille de la fenêtre */
     frame.setSize( (int)(SCRSIZE*1.9), SCRSIZE); // donner la taille via la constante
 
     frame.setResizable(true);
@@ -110,7 +113,22 @@ public class Game
       }
 
       //g.setColor(Color.RED);
+
     }
+
+    /** implémenter image pion */
+    /*
+    public void drawImgPion(int x,int y){
+      () -> g2
+      try{
+        Image pionsold= ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/pion_soldat.png"));
+        g3.drawImage(pionsold,x,y,null);
+      }
+      catch (IOException e){
+        e.printStackTrace();
+      }
+    }
+     */
 
     class MyMouseListener extends MouseAdapter	{
       public void mouseClicked(MouseEvent e) {
@@ -125,6 +143,7 @@ public class Game
 
         initGame();
         board[Pion.getX()][Pion.getY()] = (int)'X';
+        //drawImgPion(p.x,p.y,(Graphics)null); nécessite drawImgPion
         repaint();
       }
     } // fin classe MyMouseListener
